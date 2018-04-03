@@ -8,6 +8,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    sourceMapFilename: 'bundle.map.js',
   },
 
   module: {
@@ -19,6 +20,8 @@ const config = {
       },
     ],
   },
+
+  devtool: 'source-map',
 };
 
 module.exports = config;
