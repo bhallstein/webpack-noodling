@@ -10,6 +10,7 @@ const config = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
     sourceMapFilename: '[file].map',
+    chunkFilename: 'bundle.[name].js',
     publicPath: 'build/',    // Specify public asset path
   },
 
