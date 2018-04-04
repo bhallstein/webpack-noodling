@@ -1,6 +1,5 @@
-
 export function append_img() {
   const img = document.createElement('img');
-  img.src = 'https://lorempixel.com/300/300';
+  img.src = 'https://placebear.com/400/400';
   document.body.appendChild(img);
 }

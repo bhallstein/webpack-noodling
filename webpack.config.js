@@ -1,4 +1,5 @@
 const path = require('path');
+const mini_css_extract_plugin = require('mini-css-extract-plugin');
 
 const config = {
   mode: 'production',
@@ -8,7 +9,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    sourceMapFilename: 'bundle.map.js',
+    sourceMapFilename: '[file].map',
   },
 
   module: {
@@ -20,12 +21,21 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      }
+        use: [
+          mini_css_extract_plugin.loader,
+          'css-loader',
+        ],
+      },
     ],
   },
 
   devtool: 'source-map',
+
+  plugins: [
+    new mini_css_extract_plugin({
+      filename: 'style.css',
+    }),
+  ],
 };
 
 module.exports = config;
