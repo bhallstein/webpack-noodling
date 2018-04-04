@@ -1,5 +1,9 @@
-export function append_img() {
+export function append_img(src) {
   const img = document.createElement('img');
-  img.src = 'https://placebear.com/400/400';
+  img.src = src;
   document.body.appendChild(img);
+}
+
+export function append_imgs(images) {
+  images.forEach(append_img);
 }

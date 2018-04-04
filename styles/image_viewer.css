@@ -1,6 +1,9 @@
-
 img {
   background-color: #f5f5f5;
   padding: 8px;
   border: 1px solid #aaa;
+	height: 200px;
+}
+img:not(:last-child) {
+	margin-right: 8px;
 }

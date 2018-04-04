@@ -10,6 +10,7 @@ const config = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
     sourceMapFilename: '[file].map',
+    publicPath: 'build/',    // Specify public asset path
   },
 
   module: {
@@ -26,6 +27,13 @@ const config = {
           'css-loader',
         ],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          'file-loader',
+          'image-webpack-loader',
+        ],
+      }
     ],
   },
 
