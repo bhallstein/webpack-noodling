@@ -22,10 +22,11 @@ const config = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           mini_css_extract_plugin.loader,
           'css-loader',
+          'sass-loader',
         ],
       },
       {
@@ -34,7 +35,7 @@ const config = {
           'file-loader',
           'image-webpack-loader',
         ],
-      }
+      },
     ],
   },
 

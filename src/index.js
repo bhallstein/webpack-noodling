@@ -1,4 +1,4 @@
-import '../styles/image_viewer.css';
+import '../styles/image_viewer.scss';
 
 
 import img1 from '../assets/img1.jpg';
